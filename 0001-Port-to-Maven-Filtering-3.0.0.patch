@@ -1,0 +1,25 @@
+From 350af4a332d6997562e3f6615202a4bdcb6bca4d Mon Sep 17 00:00:00 2001
+From: Mikolaj Izdebski <mizdebsk@redhat.com>
+Date: Tue, 10 Nov 2015 07:15:10 +0100
+Subject: [PATCH 1/2] Port to Maven Filtering 3.0.0
+
+---
+ .../java/org/apache/maven/plugin/assembly/format/ReaderFormatter.java   | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/main/java/org/apache/maven/plugin/assembly/format/ReaderFormatter.java b/src/main/java/org/apache/maven/plugin/assembly/format/ReaderFormatter.java
+index b87ebf2..1f9cf0c 100644
+--- a/src/main/java/org/apache/maven/plugin/assembly/format/ReaderFormatter.java
++++ b/src/main/java/org/apache/maven/plugin/assembly/format/ReaderFormatter.java
+@@ -52,7 +52,7 @@ public class ReaderFormatter
+ 
+             MavenReaderFilterRequest filterRequest =
+                 new MavenReaderFilterRequest( source, true, configSource.getProject(), configSource.getFilters(),
+-                                              isPropertiesFile, null, configSource.getMavenSession(), null );
++                                              isPropertiesFile, configSource.getMavenSession(), null );
+             filterRequest.setEscapeString( escapeString );
+ 
+             // if these are NOT set, just use the defaults, which are '${*}' and '@'.
+-- 
+2.5.0
+

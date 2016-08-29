@@ -1,0 +1,25 @@
+From be43efd76b419807c183f691c7b52849f9a48211 Mon Sep 17 00:00:00 2001
+From: Mikolaj Izdebski <mizdebsk@redhat.com>
+Date: Tue, 5 Jan 2016 09:53:09 +0100
+Subject: [PATCH 2/2] Port to Maven Shared IO 3.0.0
+
+---
+ .../java/org/apache/maven/plugin/assembly/io/DefaultAssemblyReader.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/main/java/org/apache/maven/plugin/assembly/io/DefaultAssemblyReader.java b/src/main/java/org/apache/maven/plugin/assembly/io/DefaultAssemblyReader.java
+index 1030ed8..f8681fa 100644
+--- a/src/main/java/org/apache/maven/plugin/assembly/io/DefaultAssemblyReader.java
++++ b/src/main/java/org/apache/maven/plugin/assembly/io/DefaultAssemblyReader.java
+@@ -137,7 +137,7 @@ public class DefaultAssemblyReader
+         if ( ( descriptorSourceDirectory != null ) && descriptorSourceDirectory.isDirectory() )
+         {
+             locator.setStrategies(
+-                Collections.singletonList( new RelativeFileLocatorStrategy( descriptorSourceDirectory ) ) );
++                Collections.<LocatorStrategy>singletonList( new RelativeFileLocatorStrategy( descriptorSourceDirectory ) ) );
+ 
+             final DirectoryScanner scanner = new DirectoryScanner();
+             scanner.setBasedir( descriptorSourceDirectory );
+-- 
+2.5.0
+

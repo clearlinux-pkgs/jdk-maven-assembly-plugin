@@ -1,0 +1,2 @@
+python3 /usr/share/java-utils/pom_editor.py pom_xpath_set      pom:mavenVersion 3.3.3
+python3 /usr/share/java-utils/pom_editor.py pom_remove_dep :maven-project
