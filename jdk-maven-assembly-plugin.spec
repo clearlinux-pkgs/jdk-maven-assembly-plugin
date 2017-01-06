@@ -4,7 +4,7 @@
 #
 Name     : jdk-maven-assembly-plugin
 Version  : 2.6
-Release  : 1
+Release  : 2
 URL      : http://repo2.maven.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/2.6/maven-assembly-plugin-2.6-source-release.zip
 Source0  : http://repo2.maven.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/2.6/maven-assembly-plugin-2.6-source-release.zip
 Summary  : No detailed summary available
